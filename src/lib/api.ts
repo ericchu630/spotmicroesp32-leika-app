@@ -69,7 +69,7 @@ async function sendRequest<TResponse>(
 
 function resolveUrl(url: string): string {
     if (url.startsWith('http') || !get(location)) return url;
-    const protocol = window.location.protocol;
+    const protocol = 'http'//window.location.protocol;
     return `${protocol}//${get(location)}${url.startsWith('/') ? '' : '/'}${url}`;
 }
 
